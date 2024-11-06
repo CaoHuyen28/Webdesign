@@ -161,39 +161,6 @@
       color: #2980b9;
       font-weight: bold;
     }
-
-    /* Footer */
-    .footer {
-      background-color: #001f3f;
-      color: #d9eafc;
-      padding: 20px 0;
-      text-align: center;
-      border-top: 2px solid #0d3c6d;
-      margin-top: 20px;
-    }
-
-    .footer-logo img {
-      width: 80px;
-      margin-bottom: 10px;
-    }
-
-    .footer-text p {
-      margin: 5px 0;
-      font-size: 14px;
-    }
-
-    .social-icons a {
-      font-size: 24px;
-      margin: 0 10px;
-      color: #d9eafc;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #ffc107;
-    }
-
     /* Phong cách chung */
     body {
       font-family: Arial, sans-serif;
@@ -261,6 +228,48 @@
       background-color: #2c3e50;
       box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     }
+    /* Khoảng cách cho các bài viết */
+#posts-container {
+    max-width: 600px;
+    margin: 0 auto; /* Căn giữa phần bài viết */
+    margin-top: 20px; /* Khoảng cách giữa form và bài viết */
+}
+    .container {
+    flex: 1; /* Đẩy footer xuống */
+}
+
+/* Đặt footer ở dưới cùng */
+/* Footer */
+    .footer {
+      background-color: #001f3f;
+      color: #d9eafc;
+      padding: 20px 0;
+      text-align: center;
+      border-top: 2px solid #0d3c6d;
+      margin-top: 20px;
+    }
+
+    .footer-logo img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .footer-text p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: #d9eafc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffc107;
+    }
 
   </style>
 </head>
@@ -300,7 +309,11 @@
     <input type="text" id="post-title" placeholder="Enter your post title">
     <textarea id="post-content" placeholder="Write your content here..."></textarea>
     <button onclick="addPost()">Post</button>
-     </div>
+</div>
+
+<div id="posts-container">
+    <!-- Các bài đăng sẽ được thêm vào đây -->
+</div>
 
       <!-- Posts -->
       <div class="post">

@@ -89,6 +89,42 @@ figure{
         left:0;
     }
 }
+    /* Cấu trúc cho phần Did you know */
+.did-you-know {
+    background-color: #f5f8fc; /* Nền nhẹ */
+    border: 1px solid #dde2e8; /* Đường viền nhẹ */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Hiệu ứng hover cho Did you know */
+.did-you-know:hover {
+    transform: translateY(-5px); /* Phóng to nhẹ */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Đổ bóng rõ hơn */
+}
+
+.did-you-know h3 {
+    font-size: 20px;
+    color: #3b5998;
+    margin-bottom: 10px;
+}
+
+.did-you-know p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.did-you-know img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
     /* Footer */
 .footer {
     background-color: #001f3f;
@@ -170,19 +206,19 @@ figure{
       <div class="slider">
         <figure>
             <div class="slide">
-                <h1>Gambar Satu</h1>
+                <h1>Breaking news</h1>
                 <img src="image1.jpg" alt="">
             </div>
             <div class="slide">
-                <h1>Gambar Dua</h1>
+                <h1>Breaking news</h1>
                 <img src="image.png" alt="">
             </div>
             <div class="slide">
-                <h1>Gambar Tiga</h1>
+                <h1>Breaking news</h1>
                 <img src="image3.png" alt="">
             </div>
             <div class="slide">
-                <h1>Gambar Empat</h1>
+                <h1>Breaking news</h1>
                 <img src="image2.jpg" alt="">
             </div>
         </figure>
@@ -194,15 +230,14 @@ figure{
           <p>Crew-9 astronauts head toward space station as SpaceX reports rocket anomaly</p>
         </div>
         
-        <div class="sidebar-right">
-          <h3>Did you know?</h3>
-          <p><strong>Law of Cosines</strong><br>In trigonometry, the law of cosines (also known as the cosine formula or cosine rule) relates the lengths of the sides of a triangle to the cosine of one of the angles...</p>
-          <img src="image3.png" alt="Law of cosines" width="300">
-          <hr>
-          <br>
-          <p><strong>Augustin-Louis Cauchy</strong><br>Augustin-Louis Cauchy is a French mathematician born on August 21, 1789...</p>
-          <img src="image4.png" alt="Augustin-Louis Cauchy" width="300">
-        </div>
+       <div class="did-you-know">
+    <h3>Did you know?</h3>
+    <p><strong>Law of Cosines</strong><br>In trigonometry, the law of cosines (also known as the cosine formula or cosine rule) relates the lengths of the sides of a triangle to the cosine of one of the angles...</p>
+    <img src="image3.png" alt="Law of Cosines">
+    <hr>
+    <p><strong>Augustin-Louis Cauchy</strong><br>Augustin-Louis Cauchy is a French mathematician born on August 21, 1789...</p>
+    <img src="image4.png" alt="Augustin-Louis Cauchy">
+       </div>
       </section>
     </main>
   </div>

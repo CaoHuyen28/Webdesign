@@ -193,7 +193,6 @@
     .social-icons a:hover {
       color: #ffc107;
     }
-    /* Form Tạo Bài Viết */
 
     /* Phong cách chung */
     body {
@@ -296,12 +295,12 @@
       <div class="input-container">
         <input type="text" placeholder="What do you want to ask or share?">
       </div>
-     <div class="create-post">
+    <div class="create-post">
     <h3>Create a Post</h3>
     <input type="text" id="post-title" placeholder="Enter your post title">
     <textarea id="post-content" placeholder="Write your content here..."></textarea>
     <button onclick="addPost()">Post</button>
-  </div>
+     </div>
 
       <!-- Posts -->
       <div class="post">
@@ -322,6 +321,24 @@
       </div>
     </main>
   </div>
+  <script>
+    function addPost() {
+      const title = document.getElementById("post-title").value;
+      const content = document.getElementById("post-content").value;
+      
+      if (title === "" || content === "") {
+        alert("Please enter both title and content.");
+        return;
+      }
+
+      // Xử lý tạo bài viết (đây chỉ là ví dụ và sẽ thêm phần xử lý thực tế)
+      alert("Post Created: " + title + "\n" + content);
+
+      // Xóa nội dung sau khi đăng
+      document.getElementById("post-title").value = "";
+      document.getElementById("post-content").value = "";
+    }
+  </script>
 
   <!-- Footer -->
   <footer class="footer">

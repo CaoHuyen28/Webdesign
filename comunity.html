@@ -3,119 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wikipedia</title>
+  <title>Wikipedia Community</title>
   <link rel="stylesheet" href="style.css">
   <style>
-  
-.community-intro {
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-}
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-.sidebar h3 {
-            margin-top: 0;
-            font-size: 18px;
-            color: #333;
-        }
-        .sidebar .suggestion {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .sidebar .suggestion span {
-            font-size: 14px;
-            color: #333;
-        }
+    /* Phong cách chung */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-.post {
-    background-color: #b3d1e3;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-.post h4 {
-    margin: 0;
-    font-size: 16px;
-}
-.post p {
-    margin: 10px 0 0;
-    font-size: 14px;
-}
-.reaction {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: #555;
-}
-.reaction span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.input-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-.input-container input {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
 
-/* Footer */
-.footer {
-    background-color: #001f3f;
-    color: #d9eafc;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 2px solid #0d3c6d;
-    margin-top: 20px;
-}
+    /* Sidebar */
+    .sidebar {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+    }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
+    .sidebar h1 {
+      font-size: 24px;
+      color: #3b5998;
+    }
 
-.footer-logo img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 10px;
-}
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
 
-.footer-text p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #d9eafc;
-}
+    .sidebar nav ul li {
+      margin: 10px 0;
+    }
 
-.social-icons a {
-    font-size: 24px;
-    margin: 0 10px;
-    color: #d9eafc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+    .sidebar nav ul li a {
+      text-decoration: none;
+      color: #3b5998;
+      font-size: 16px;
+    }
 
-.social-icons a:hover {
-    color: #ffc107; /* Màu sáng hơn khi hover */
-}
+    .sidebar h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
 
-</style>
+    .suggestion {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .suggestion img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    /* Main Content */
+    .main-content {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .header {
+      font-size: 32px;
+      color: #2c3e50;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .community-intro {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .input-container input {
+      width: 100%;
+      max-width: 600px;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .input-container input:focus {
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      outline: none;
+    }
+
+    /* Post Card */
+    .post {
+      background-color: #ecf3fc;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .post:hover {
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .post h4 {
+      font-size: 18px;
+      color: #3b5998;
+      margin: 0;
+    }
+
+    .post h4 span {
+      font-size: 12px;
+      color: #777;
+    }
+
+    .post p {
+      font-size: 16px;
+      color: #555;
+      margin: 10px 0 0;
+    }
+
+    .reaction {
+      display: flex;
+      gap: 15px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .reaction span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #2980b9;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #001f3f;
+      color: #d9eafc;
+      padding: 20px 0;
+      text-align: center;
+      border-top: 2px solid #0d3c6d;
+      margin-top: 20px;
+    }
+
+    .footer-logo img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .footer-text p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: #d9eafc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffc107;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -123,107 +201,70 @@
     <aside class="sidebar">
       <h1>Wikipedia</h1>
       <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia Logo">
-
-      <p align="center">Free knowledge for everyone</p>
+      <p>Free knowledge for everyone</p>
       <nav>
         <ul>
-            <li><a href="./index.html">Home 🏠 </a></li>
-            <li><a href="./news.html">News 📰 </a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Law_of_cosines">Wiki 📘 </a></li>
-            <li><a href="./topic.html">Topics 📂 </a></li>
-            <li><a href="./comunity.html">Community 👥 </a></li>
-            <li><a href="./index.html">Support ❓ </a></li>
-            <li><a href="./donation.html">Donation 💰 </a></li>
-            <li><a href="./contact.html">Contact 📞 </a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Wikipedia:About">About us ℹ️ </a></li>
+          <li><a href="./index.html">Home 🏠</a></li>
+          <li><a href="./news.html">News 📰</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Law_of_cosines">Wiki 📘</a></li>
+          <li><a href="./topic.html">Topics 📂</a></li>
+          <li><a href="./comunity.html">Community 👥</a></li>
+          <li><a href="./index.html">Support ❓</a></li>
+          <li><a href="./donation.html">Donation 💰</a></li>
+          <li><a href="./contact.html">Contact 📞</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Wikipedia:About">About us ℹ️</a></li>
         </ul>
       </nav>
+
     </aside>
 
     <!-- Main Content -->
     <main class="main-content">
-      <header class="header">
-        <input type="text" placeholder="Search..." id="search-bar">
-        <div class="icons">
-            <span id="bell-icon">🔔</span>
-            <span><a href="./profile.html">👤</a></span>
-            <span><a href="./start.html">⚙️</a></span>
-        </div>
-        <span class="date">Sep 29, 2024</span>
-      </header>
-
-      
-      <div class="header">
-        Community
-    </div>
+      <div class="header">Community</div>
       <div class="community-intro">
-    <p>Welcome to the Wikipedia Community! Share knowledge, ask questions, and connect with fellow enthusiasts.</p>
+        <p>Welcome to the Wikipedia Community! Share knowledge, ask questions, and connect with fellow enthusiasts.</p>
       </div>
-    <div class="input-container">
-        <input type="text" placeholder="What do you want to ask or share">
-    </div>
+      <div class="input-container">
+        <input type="text" placeholder="What do you want to ask or share?">
+      </div>
 
-    <div class="container">
-        <div class="main-content">
-            <div class="post">
-                <h4>TranManHung <span style="font-size: 12px; color: #777;">Oct 3</span></h4>
-                <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
-                <div class="reaction">
-                    <span>👍 10</span>
-                    <span>💬 10</span>
-                </div>
-            </div>
-            <div class="post">
-                <h4>TranManHung <span style="font-size: 12px; color: #777;">Oct 3</span></h4>
-                <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
-                <div class="reaction">
-                    <span>👍 10</span>
-                    <span>💬 10</span>
-                </div>
-            </div>
-            <div class="post">
-                <h4>TranManHung <span style="font-size: 12px; color: #777;">Oct 3</span></h4>
-                <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
-                <div class="reaction">
-                    <span>👍 10</span>
-                    <span>💬 10</span>
-                </div>
-            </div>
+      <!-- Posts -->
+      <div class="post">
+        <h4>TranManHung <span>Oct 3</span></h4>
+        <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
+        <div class="reaction">
+          <span>👍 10</span>
+          <span>💬 10</span>
         </div>
-
-        <div class="sidebar">
-            <h3>You may know...</h3>
-          
-            <div class="suggestion">
-                <img src="image3.png" alt="User">
-                <span>Pitago rule</span>
-            </div>
-            <hr>
-            <div class="suggestion">
-                <img src="image4.png" alt="User">
-                <span>Who is he?</span>
-            </div>
+      </div>
+      <div class="post">
+        <h4>TranManHung <span>Oct 3</span></h4>
+        <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
+        <div class="reaction">
+          <span>👍 10</span>
+          <span>💬 10</span>
         </div>
-    </div>
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+      </div>
+    </main>
+  </div>
 
-<footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="footer-content">
-        <div class="footer-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia Logo">
+      <div class="footer-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia Logo">
+      </div>
+      <div class="footer-text">
+        <p>© 2024 Wikipedia Clone - Made with ❤️ for educational purposes.</p>
+        <p>Follow us on:</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank">📘</a>
+          <a href="https://twitter.com" target="_blank">🐦</a>
+          <a href="https://instagram.com" target="_blank">📸</a>
+          <a href="https://linkedin.com" target="_blank">🔗</a>
         </div>
-        <div class="footer-text">
-            <p>© 2024 Wikipedia Clone - Made with ❤️ for educational purposes.</p>
-            <p>Follow us on:</p>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank">📘</a>
-                <a href="https://twitter.com" target="_blank">🐦</a>
-                <a href="https://instagram.com" target="_blank">📸</a>
-                <a href="https://linkedin.com" target="_blank">🔗</a>
-            </div>
-        </div>
+      </div>
     </div>
-</footer>
+  </footer>
 </body>
 </html>

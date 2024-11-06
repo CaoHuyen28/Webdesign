@@ -107,26 +107,34 @@
   /* Breaking News Section */
   
   .breaking-news {
-    background-image: url("new.jpg");
-    background-size: cover;
+    background-color: #001f3f; /* Đổi nền thay vì ảnh nền */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa ảnh và tiêu đề */
     animation: fadeIn 1s ease-in;
-  }
-  
-  .breaking-news h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color:#d9eafc;
-  }
-  
-  .breaking-news img {
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
+}
+
+.breaking-news h2 {
+    font-size: 24px;
+    color: #d9eafc;
+    flex: 1; /* Chiếm toàn bộ chiều rộng còn lại */
+}
+
+.breaking-news .container5 .image {
+    width: 150px; /* Đặt kích thước cụ thể cho ảnh */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    border-radius: 8px;
+    overflow: hidden; /* Ẩn phần ảnh thừa nếu ảnh lớn hơn khung */
+}
+
+.breaking-news .container5 .image img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của khung */
+    height: auto; /* Đảm bảo giữ nguyên tỷ lệ ảnh */
+    display: block; /* Đảm bảo không có khoảng trống dưới ảnh */
+}
   
   /* Content Section */
   .content {

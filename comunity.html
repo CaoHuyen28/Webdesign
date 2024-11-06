@@ -234,43 +234,6 @@
     margin: 0 auto; /* Căn giữa phần bài viết */
     margin-top: 20px; /* Khoảng cách giữa form và bài viết */
 }
-    .container {
-    flex: 1; /* Đẩy footer xuống */
-}
-
-/* Đặt footer ở dưới cùng */
-/* Footer */
-    .footer {
-      background-color: #001f3f;
-      color: #d9eafc;
-      padding: 20px 0;
-      text-align: center;
-      border-top: 2px solid #0d3c6d;
-      margin-top: 20px;
-    }
-
-    .footer-logo img {
-      width: 80px;
-      margin-bottom: 10px;
-    }
-
-    .footer-text p {
-      margin: 5px 0;
-      font-size: 14px;
-    }
-
-    .social-icons a {
-      font-size: 24px;
-      margin: 0 10px;
-      color: #d9eafc;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #ffc107;
-    }
-
   </style>
 </head>
 <body>
@@ -310,9 +273,6 @@
     <textarea id="post-content" placeholder="Write your content here..."></textarea>
     <button onclick="addPost()">Post</button>
 </div>
-<div class="container">
-    <!-- Nội dung của bạn -->
-  </div>
 <div id="posts-container">
     <!-- Các bài đăng sẽ được thêm vào đây -->
 </div>
@@ -354,24 +314,5 @@
       document.getElementById("post-content").value = "";
     }
   </script>
-
-  <!-- Footer -->
-   <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia Logo">
-      </div>
-      <div class="footer-text">
-        <p>© 2024 Wikipedia Clone - Made with ❤️ for educational purposes.</p>
-        <p>Follow us on:</p>
-        <div class="social-icons">
-          <a href="https://facebook.com" target="_blank">📘</a>
-          <a href="https://twitter.com" target="_blank">🐦</a>
-          <a href="https://instagram.com" target="_blank">📸</a>
-          <a href="https://linkedin.com" target="_blank">🔗</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>

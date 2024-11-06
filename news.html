@@ -125,30 +125,39 @@ figure{
     border-radius: 8px;
     margin-top: 10px;
 }
-    .main-news {
+  .main-news {
+    background-color: #f5f8fc; /* Nền nhẹ */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Căn giữa nội dung theo chiều ngang */
-    padding: 20px;
-    background-color: #e8f0f7; /* Màu nền nhẹ để phân biệt */
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-news:hover {
+    transform: translateY(-5px); /* Hiệu ứng hover nâng khung */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
 }
 
 .main-news img {
-    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
-    max-width: 300px; /* Đặt chiều rộng tối đa để giữ cân đối */
+    width: 100%; /* Chiếm toàn bộ chiều rộng khung */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px; /* Tạo khoảng cách giữa ảnh và văn bản */
+    border-radius: 10px; /* Bo góc nhẹ cho ảnh */
+    margin-bottom: 15px;
 }
 
 .main-news p {
-    font-size: 20px;
+    font-size: 22px; /* Kích thước chữ lớn hơn cho tiêu đề */
     line-height: 1.5;
     color: #333;
-    text-align: center; /* Căn giữa văn bản */
+    font-weight: bold;
     margin-top: 10px;
+    max-width: 600px;
 }
     /* Footer */
 .footer {

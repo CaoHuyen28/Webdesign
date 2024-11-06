@@ -194,55 +194,75 @@
       color: #ffc107;
     }
     /* Form Tạo Bài Viết */
-.create-post {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: center;
-}
 
-.create-post h3 {
-    margin-bottom: 15px;
-    color: #2c3e50;
-}
+    /* Phong cách chung */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
 
-#create-post input,
-#create-post textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    resize: vertical;
-}
+    /* Form tạo bài viết */
+    .create-post {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
 
-#create-post textarea {
-    height: 100px;
-}
+    .create-post h3 {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
 
-.create-post button {
-    padding: 10px 20px;
-    background-color: #3b5998;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+    .create-post input[type="text"],
+    .create-post textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+      box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
+    }
 
-.create-post button:hover {
-    background-color: #2c3e50;
-}
+    .create-post input[type="text"]:focus,
+    .create-post textarea:focus {
+      border-color: #3b5998;
+      outline: none;
+    }
 
-/* Container cho các bài viết mới */
-#posts-container {
-    margin-top: 20px;
-}
+    .create-post textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .create-post button {
+      padding: 10px 30px;
+      background-color: #3b5998;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .create-post button:hover {
+      background-color: #2c3e50;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
   </style>
 </head>
 <body>
@@ -276,16 +296,31 @@
       <div class="input-container">
         <input type="text" placeholder="What do you want to ask or share?">
       </div>
-      <div class="create-post">
+     <div class="create-post">
     <h3>Create a Post</h3>
     <input type="text" id="post-title" placeholder="Enter your post title">
     <textarea id="post-content" placeholder="Write your content here..."></textarea>
     <button onclick="addPost()">Post</button>
-</div>
+  </div>
 
-<div id="posts-container">
-    <!-- Các bài đăng sẽ được thêm vào đây -->
-</div>
+  <script>
+    function addPost() {
+      const title = document.getElementById("post-title").value;
+      const content = document.getElementById("post-content").value;
+      
+      if (title === "" || content === "") {
+        alert("Please enter both title and content.");
+        return;
+      }
+
+      // Xử lý tạo bài viết (đây chỉ là ví dụ và sẽ thêm phần xử lý thực tế)
+      alert("Post Created: " + title + "\n" + content);
+
+      // Xóa nội dung sau khi đăng
+      document.getElementById("post-title").value = "";
+      document.getElementById("post-content").value = "";
+    }
+  </script>
 
       <!-- Posts -->
       <div class="post">

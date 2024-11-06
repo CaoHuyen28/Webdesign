@@ -341,23 +341,5 @@
       </div>
     </div>
   </footer>
-  <script>
-    function addPost() {
-      const title = document.getElementById("post-title").value;
-      const content = document.getElementById("post-content").value;
-      
-      if (title === "" || content === "") {
-        alert("Please enter both title and content.");
-        return;
-      }
-
-      // Xử lý tạo bài viết (đây chỉ là ví dụ và sẽ thêm phần xử lý thực tế)
-      alert("Post Created: " + title + "\n" + content);
-
-      // Xóa nội dung sau khi đăng
-      document.getElementById("post-title").value = "";
-      document.getElementById("post-content").value = "";
-    }
-  </script>
 </body>
 </html>

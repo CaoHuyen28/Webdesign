@@ -62,6 +62,14 @@
     width: 24px;
     margin-right: 10px;
   }
+.sidebar nav ul {
+    list-style-type: none; /* Loại bỏ dấu bullet */
+    padding-left: 0; /* Loại bỏ khoảng cách thụt vào */
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px; /* Tạo khoảng cách giữa các mục */
+}
   
   /* Main Content */
   .main-content {
